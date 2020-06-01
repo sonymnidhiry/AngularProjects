@@ -1,11 +1,13 @@
 ﻿import { Component } from '@angular/core'
+import { IEmployee } from './employee'
+
 
 @Component({
     selector: 'list-employee',
     templateUrl: 'app/employee/employeeList.component.html'
 })
-export class EmployeeListComponent {
-    employees: any[] = [
+export class EmployeeListComponent implements IEmployee {
+    employees: IEmployee[] = [
         {code:'emp01',name:'Sony',gender:'Male', dob:'01/22/1987'},
         {code:'emp02',name:'Vidya',gender:'Female',dob:'01/23/1988'},
         {code:'emp03',name:'Rachel',gender:'Female',dob:'04/22/2017'},

@@ -107,3 +107,4 @@ C:\Users\sonym\source\repos\Angular Projects\Angular Project 1 - Basics\AngularS
 C:\Users\sonym\source\repos\Angular Projects\Angular Project 1 - Basics\AngularStudy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\sonym\source\repos\Angular Projects\Angular Project 1 - Basics\AngularStudy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\sonym\source\repos\Angular Projects\Angular Project 1 - Basics\AngularStudy\obj\Debug\AngularStudy.csproj.CopyComplete
+C:\Users\sonym\source\repos\Angular Projects\Angular Project 1 - Basics\AngularStudy\obj\Debug\AngularStudy.csprojAssemblyReference.cache
