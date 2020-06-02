@@ -29,3 +29,4 @@ var EmployeeComponent = /** @class */ (function () {
     return EmployeeComponent;
 }());
 exports.EmployeeComponent = EmployeeComponent;
+//# sourceMappingURL=employee.component.js.map
