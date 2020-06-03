@@ -1,4 +1,4 @@
-﻿<employee-count [all]="getEmployeeCount()" [male]="getMaleCount()" [female]="getFemaleCount()"
+﻿<employee-count *ngIf="employees" [all]="getEmployeeCount()" [male]="getMaleCount()" [female]="getFemaleCount()"
                 (coutRadioButtonSelectionChanged)="onEmpCountRadioButtonChanged($event)"></employee-count>
 <br /><br />
 <table>

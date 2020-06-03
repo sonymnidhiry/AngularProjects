@@ -19,7 +19,7 @@ export class EmployeeListComponent implements IEmployee {
     }
 
     ngOnInit() {
-        this.employees = this._employeeService.getEmployees();
+        this._employeeService.getEmployees().subscribe((employeeData) => this.employees = employeeData)
     }
     selectedEmpCountRadioButton: string = 'All';
 
