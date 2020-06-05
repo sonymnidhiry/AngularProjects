@@ -1,6 +1,7 @@
 ﻿import { Component,Provider,OnInit } from '@angular/core';
 import { IEmployee } from './employee';
 import { EmployeeService } from './employee.service';
+import { error } from 'util';
 
 
 @Component({
@@ -14,12 +15,17 @@ export class EmployeeListComponent implements IEmployee {
     gender: string;
     dob: string;
     employees: IEmployee[];
+
+    statusMesage: string='Loading Data....'
     constructor(private _employeeService: EmployeeService) {
         
     }
 
     ngOnInit() {
-        this._employeeService.getEmployees().subscribe((employeeData) => this.employees = employeeData)
+        this._employeeService.getEmployees().subscribe((employeeData) => this.employees = employeeData,
+            (error) => {
+                this.statusMesage = 'Problem with Service';
+            });
     }
     selectedEmpCountRadioButton: string = 'All';
 

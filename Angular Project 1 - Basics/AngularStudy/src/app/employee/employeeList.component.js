@@ -14,11 +14,14 @@ var employee_service_1 = require("./employee.service");
 var EmployeeListComponent = /** @class */ (function () {
     function EmployeeListComponent(_employeeService) {
         this._employeeService = _employeeService;
+        this.statusMesage = 'Loading Data....';
         this.selectedEmpCountRadioButton = 'All';
     }
     EmployeeListComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this._employeeService.getEmployees().subscribe(function (employeeData) { return _this.employees = employeeData; });
+        this._employeeService.getEmployees().subscribe(function (employeeData) { return _this.employees = employeeData; }, function (error) {
+            _this.statusMesage = 'Problem with Service';
+        });
     };
     EmployeeListComponent.prototype.onEmpCountRadioButtonChanged = function (selectedRadioButtonValue) {
         this.selectedEmpCountRadioButton = selectedRadioButtonValue;

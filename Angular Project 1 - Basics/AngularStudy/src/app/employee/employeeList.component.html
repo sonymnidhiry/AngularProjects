@@ -20,7 +20,10 @@
                 <td>{{i}}</td>
             </tr>
         </ng-container>
-        <tr *ngIf="!employees || employees.length==0">
+        <tr *ngIf="!employees">
+            <td colspan="5">{{statusMessage}}</td>
+        </tr>
+        <tr *ngIf="employees && employees.length==0">
             <td colspan="5">No employees</td>
         </tr>
     </tbody>
